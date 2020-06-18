@@ -19,7 +19,7 @@ Microglia express a range of proteins and genes when shifting between pro- and a
 More to come
 
 ### Plots
-More to come
+Plots display biomarker expression in relation to cytokine exposure. Plots were used to uncover unique biomarker patterns and characterize microglial reaction to cytokines. 
 
 ### Credits
 @author Benjamin Ahn
