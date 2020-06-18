@@ -11,7 +11,8 @@ main2 <- main %>% pivot_longer(c(LPS, 'IL-1Beta', TNFalpha, 'IL-4', 'IL-10', IFN
 ggplot(main2) + geom_bar(aes(x = cytokine, y = quantification, fill = Marker), 
                          position = "dodge", stat = "identity") + 
   ggtitle("Effect of Cytokines on Biomarker Expression");
-ggplot(main2) + geom_bar(aes(x = cytokine, y = quantification, fill = Marker), 
+
+general2 <- ggplot(main2) + geom_bar(aes(x = cytokine, y = quantification, fill = Marker), 
                          position = "stack", stat = "identity") + 
   ggtitle("Effect of Cytokines on Biomarker Expression");
 
@@ -56,5 +57,17 @@ ggplot(main2) + geom_tile(mapping = aes(x = cytokine, y = Marker, fill = quantif
   ggtitle("Cytokine and Correlated Biomarkers");
 
 #*******************************************************************************
+
+#find markers that are highly expressed with LPS
+LPS_allMarkers <- main2 %>% filter(cytokine == "LPS");
+LPS_allMarkers_mean <- LPS_allMarkers$quantification %>% mean();
+LPS_allMarkers %>% filter(quantification > LPS_allMarkers_mean) %>% 
+  ggplot() + geom_bar(mapping = aes(x = Marker, y = quantification, fill = Molecule), stat = "identity") +
+  ggtitle("Highly Expressed Biomarkers with LPS");
+
+#find which cytokine causes the greatest expression of a specific biomarker
+main2 %>% filter(Marker == "iNOS") %>% ggplot() + geom_point(mapping = aes(x = cytokine,
+                                                                           y = quantification)) +
+  ggtitle("iNOS Expression for each Cytokine");
 
 end
