@@ -1,11 +1,11 @@
 # Microglia Protein/Gene Expression
-Data visualizations of common protein/gene markers of microglial inflammation in response to cytokine/biomolecule exposure
+Data visualizations of common protein/gene markers of microglial inflammation in response to cytokine/biomolecule exposure  
 
 @author Benjamin Ahn
 
 ### Technologies
-R Studio 3.4.4
-Data used from the Chhor (doi: 10.1016/j.bbi.2013.02.005)
+R Studio 3.4.4  
+Data used from the Chhor (doi: 10.1016/j.bbi.2013.02.005)  
 
 ### Table of Contents
 * Purpose
@@ -22,5 +22,5 @@ More to come
 Plots display biomarker expression in relation to cytokine exposure. Plots were used to uncover unique biomarker patterns and characterize microglial reaction to cytokines. 
 
 ### Credits
-@author Benjamin Ahn
-@version 1.0
+@author Benjamin Ahn  
+@version 1.0  
